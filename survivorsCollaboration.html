@@ -1,0 +1,119 @@
+<!doctype html>
+
+  <head>
+       <!-- Include Plotly.js -->
+       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   </head>
+
+   <body>
+       <h1>Holocaust Data Visualizations</h1>
+       <!-- Add chart code -->
+       <p>
+        <!--/// Chart is below this. \\\-->
+      </p>
+      <div id="myDiv">
+          <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+      <p>
+          Data source: Currated by Dr. Alberto Giordano (Dept. of Geography, Texas State University) and Dr. Tim Cole (Dept. of History, University of Bristol)
+        <!--^^^ Chart is above this. ^^^-->
+      </p>
+  <!--  <script>
+        var trace = {
+            x: [1, 2, 3, 4, 5, 6, 7, 8],
+            y: [1, 4, 9, 16, 25, 36, 49, 64],
+            mode: 'lines+markers+text',
+            type: 'bar',
+            
+        };
+        var layout = {
+            title: {
+                text:"This is the title",
+                font: {
+                    family:"Arial",
+                    size:24
+                }
+            },
+            xaxis:{
+                title:{
+                    text: 'The x Axis',
+                    font: {
+                        family:'Circular, monospace',
+                        size: 18,
+                        color: '#7f7f7f'
+                    }
+                }
+            },
+            // yaxis:{
+            //     title:{
+            //         text: 'The y Axis',
+            //         font: {
+            //             family:'Courier New',
+            //             size: 18,
+            //             color: '#7f7f7f'
+            //         }
+            //     }
+            // }
+
+        };
+        var data = [trace];
+        Plotly.newPlot('myDiv', data, layout);
+    </script> -->
+
+  <script>
+        var trace1 = {
+            x: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'Unk'],
+            y: [7, 76, 41, 70, 394, 482, 830, 295, 123, 51, 32, 42, 74, 163,4],
+            mode: 'lines+markers+text',
+            type: 'bar',
+            name:"Male"
+            
+        };
+        var trace2 = {
+            x: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'Unk'],
+            y: [15, 115, 71, 125, 626, 727, 1349, 489, 202, 71, 59, 61, 124, 218, 4],
+            mode: 'lines+markers+text',
+            type: 'bar',
+            name:"Female"
+            
+        };
+
+
+        var layout = {
+            title: {
+                text:"Holocaust Survivors in Budapest (1945)",
+                font: {
+                    family:"Arial",
+                    size:24
+                }
+            },
+            xaxis:{
+                title:{
+                    text: 'District',
+                    font: {
+                        family:'Arial, monospace',
+                        size: 18,
+                        color: '#7f7f7f'
+                    }
+                }
+            },
+            yaxis:{
+                title:{
+                    text: 'Number of survivors',
+                    font: {
+                        family:'Arial, monospace',
+                        size: 18,
+                        color: '#7f7f7f'
+                    }
+                }
+            }
+
+        };
+        var data = [trace1, trace2];
+        Plotly.newPlot('myDiv', data, layout);
+    </script> 
+
+
+   </body>
+
+</html>
